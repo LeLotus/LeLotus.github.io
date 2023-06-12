@@ -106,7 +106,7 @@
           ></span>
           avec <span id="instructeur" class="text-white"></span> à
           <span id="time" class="text-white"></span>h le
-          <span id="date" class="text-white"></span>
+          <span id="date" class="text-white"></span>.
         </p>
         <p class="text-white pb-4">
           Un courriel de confirmation sera envoyé à
@@ -121,15 +121,48 @@
         localStorage.getItem("class-select");
       document.getElementById("instructeur").innerHTML =
         localStorage.getItem("instr-select");
-      document.getElementById("date").innerHTML =
-        localStorage.getItem("date-select");
-      console.log(localStorage.getItem("date-select"));
       document.getElementById("time").innerHTML =
         localStorage.getItem("time-select");
       document.getElementById("name").innerHTML =
         localStorage.getItem("nom-type");
       document.getElementById("email").innerHTML =
         localStorage.getItem("email-type");
+
+      var date = localStorage.getItem("date-select");
+      var month = date.split("/")[0];
+      var day = date.split("/")[1];
+      var year = date.split("/")[2];
+
+      if (day[0] == 0) {
+        day = day.replace("0", "");
+      }
+      if (month == "01") {
+        month = " janvier ";
+      } else if (month == "02") {
+        month = " février ";
+      } else if (month == "03") {
+        month = " mars ";
+      } else if (month == "04") {
+        month = " avril ";
+      } else if (month == "05") {
+        month = " mai ";
+      } else if (month == "06") {
+        month = " juin ";
+      } else if (month == "07") {
+        month = " juillet ";
+      } else if (month == "08") {
+        month = " aout ";
+      } else if (month == "09") {
+        month = " septembre ";
+      } else if (month == "10") {
+        month = " octobre ";
+      } else if (month == "11") {
+        month = " novembre ";
+      } else if (month == "12") {
+        month = " décembre ";
+      }
+      var date_long = day + month + year;
+      document.getElementById("date").innerHTML = date_long;
     </script>
     <!--- Footer -->
     <footer class="container-fluid">
@@ -171,7 +204,3 @@
     </footer>
   </body>
 </html>
-
-<!-- View in Browser -->
-
-<!-- End View in Browser -->
