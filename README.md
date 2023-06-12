@@ -1,4 +1,4 @@
 Le Lotus <br>
-SEG3525
-Premier projet Bootstrap par Caterina Bosi
-https://lelotus.github.io/
+SEG3525 <br>
+Premier projet Bootstrap par Caterina Bosi <br>
+Accessible à https://lelotus.github.io/
